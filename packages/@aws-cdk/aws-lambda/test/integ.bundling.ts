@@ -19,7 +19,7 @@ class TestStack extends Stack {
     const fn = new lambda.Function(this, 'Function', {
       code: lambda.Code.fromAsset(assetPath, {
         bundling: {
-          image: lambda.Runtime.PYTHON_3_6.bundlingImage,
+          image: lambda.Runtime.PYTHON_3_9.bundlingImage,
           command: [
             'bash', '-c', [
               'cp -au . /asset-output',
@@ -29,7 +29,7 @@ class TestStack extends Stack {
           ],
         },
       }),
-      runtime: lambda.Runtime.PYTHON_3_6,
+      runtime: lambda.Runtime.PYTHON_3_9,
       handler: 'index.handler',
     });
 

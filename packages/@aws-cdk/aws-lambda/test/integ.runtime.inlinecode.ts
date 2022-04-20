@@ -22,12 +22,12 @@ const node12xfn = new Function(stack, 'NODEJS_12_X', {
 });
 new CfnOutput(stack, 'NODEJS_12_X-functionName', { value: node12xfn.functionName });
 
-const python36 = new Function(stack, 'PYTHON_3_6', {
+const python36 = new Function(stack, 'PYTHON_3_9', {
   code: new InlineCode('def handler(event, context):\n  return "success"'),
   handler: 'index.handler',
-  runtime: Runtime.PYTHON_3_6,
+  runtime: Runtime.PYTHON_3_9,
 });
-new CfnOutput(stack, 'PYTHON_3_6-functionName', { value: python36.functionName });
+new CfnOutput(stack, 'PYTHON_3_9-functionName', { value: python36.functionName });
 
 const python37 = new Function(stack, 'PYTHON_3_7', {
   code: new InlineCode('def handler(event, context):\n  return "success"'),
