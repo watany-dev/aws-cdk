@@ -615,7 +615,7 @@ describe('function', () => {
           'Arn',
         ],
       },
-      Runtime: 'python3.6',
+      Runtime: 'python3.9',
     });
   });
 
