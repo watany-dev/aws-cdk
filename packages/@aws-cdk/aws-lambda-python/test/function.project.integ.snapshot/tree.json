@@ -54,44 +54,12 @@
                   "aws:cdk:cloudformation:props": {
                     "content": {
                       "s3Bucket": {
-                        "Ref": "AssetParameters17b630fc1db14bbe0d5eb87727c98ecd485e519ce6b9075d68b3cb359f42c142S3Bucket23FDBB16"
+                        "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
                       },
-                      "s3Key": {
-                        "Fn::Join": [
-                          "",
-                          [
-                            {
-                              "Fn::Select": [
-                                0,
-                                {
-                                  "Fn::Split": [
-                                    "||",
-                                    {
-                                      "Ref": "AssetParameters17b630fc1db14bbe0d5eb87727c98ecd485e519ce6b9075d68b3cb359f42c142S3VersionKey60018565"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "Fn::Select": [
-                                1,
-                                {
-                                  "Fn::Split": [
-                                    "||",
-                                    {
-                                      "Ref": "AssetParameters17b630fc1db14bbe0d5eb87727c98ecd485e519ce6b9075d68b3cb359f42c142S3VersionKey60018565"
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        ]
-                      }
+                      "s3Key": "54f6b224386f99081122c19ab02320159c48c4893d1691183e1cf2b7d6199e35.zip"
                     },
                     "compatibleRuntimes": [
-                      "python3.6"
+                      "python3.9"
                     ]
                   }
                 },
@@ -103,84 +71,6 @@
             },
             "constructInfo": {
               "fqn": "@aws-cdk/aws-lambda-python.PythonLayerVersion",
-              "version": "0.0.0"
-            }
-          },
-          "AssetParameters": {
-            "id": "AssetParameters",
-            "path": "cdk-integ-lambda-function-project/AssetParameters",
-            "children": {
-              "17b630fc1db14bbe0d5eb87727c98ecd485e519ce6b9075d68b3cb359f42c142": {
-                "id": "17b630fc1db14bbe0d5eb87727c98ecd485e519ce6b9075d68b3cb359f42c142",
-                "path": "cdk-integ-lambda-function-project/AssetParameters/17b630fc1db14bbe0d5eb87727c98ecd485e519ce6b9075d68b3cb359f42c142",
-                "children": {
-                  "S3Bucket": {
-                    "id": "S3Bucket",
-                    "path": "cdk-integ-lambda-function-project/AssetParameters/17b630fc1db14bbe0d5eb87727c98ecd485e519ce6b9075d68b3cb359f42c142/S3Bucket",
-                    "constructInfo": {
-                      "fqn": "@aws-cdk/core.CfnParameter",
-                      "version": "0.0.0"
-                    }
-                  },
-                  "S3VersionKey": {
-                    "id": "S3VersionKey",
-                    "path": "cdk-integ-lambda-function-project/AssetParameters/17b630fc1db14bbe0d5eb87727c98ecd485e519ce6b9075d68b3cb359f42c142/S3VersionKey",
-                    "constructInfo": {
-                      "fqn": "@aws-cdk/core.CfnParameter",
-                      "version": "0.0.0"
-                    }
-                  },
-                  "ArtifactHash": {
-                    "id": "ArtifactHash",
-                    "path": "cdk-integ-lambda-function-project/AssetParameters/17b630fc1db14bbe0d5eb87727c98ecd485e519ce6b9075d68b3cb359f42c142/ArtifactHash",
-                    "constructInfo": {
-                      "fqn": "@aws-cdk/core.CfnParameter",
-                      "version": "0.0.0"
-                    }
-                  }
-                },
-                "constructInfo": {
-                  "fqn": "@aws-cdk/core.Construct",
-                  "version": "0.0.0"
-                }
-              },
-              "3b38dd8a7ec44ceadfdf2382a5bf6b66d4b1edaf39fbca26e186e4a2a62205f8": {
-                "id": "3b38dd8a7ec44ceadfdf2382a5bf6b66d4b1edaf39fbca26e186e4a2a62205f8",
-                "path": "cdk-integ-lambda-function-project/AssetParameters/3b38dd8a7ec44ceadfdf2382a5bf6b66d4b1edaf39fbca26e186e4a2a62205f8",
-                "children": {
-                  "S3Bucket": {
-                    "id": "S3Bucket",
-                    "path": "cdk-integ-lambda-function-project/AssetParameters/3b38dd8a7ec44ceadfdf2382a5bf6b66d4b1edaf39fbca26e186e4a2a62205f8/S3Bucket",
-                    "constructInfo": {
-                      "fqn": "@aws-cdk/core.CfnParameter",
-                      "version": "0.0.0"
-                    }
-                  },
-                  "S3VersionKey": {
-                    "id": "S3VersionKey",
-                    "path": "cdk-integ-lambda-function-project/AssetParameters/3b38dd8a7ec44ceadfdf2382a5bf6b66d4b1edaf39fbca26e186e4a2a62205f8/S3VersionKey",
-                    "constructInfo": {
-                      "fqn": "@aws-cdk/core.CfnParameter",
-                      "version": "0.0.0"
-                    }
-                  },
-                  "ArtifactHash": {
-                    "id": "ArtifactHash",
-                    "path": "cdk-integ-lambda-function-project/AssetParameters/3b38dd8a7ec44ceadfdf2382a5bf6b66d4b1edaf39fbca26e186e4a2a62205f8/ArtifactHash",
-                    "constructInfo": {
-                      "fqn": "@aws-cdk/core.CfnParameter",
-                      "version": "0.0.0"
-                    }
-                  }
-                },
-                "constructInfo": {
-                  "fqn": "@aws-cdk/core.Construct",
-                  "version": "0.0.0"
-                }
-              }
-            },
-            "constructInfo": {
-              "fqn": "@aws-cdk/core.Construct",
               "version": "0.0.0"
             }
           },
@@ -271,41 +161,9 @@
                   "aws:cdk:cloudformation:props": {
                     "code": {
                       "s3Bucket": {
-                        "Ref": "AssetParameters3b38dd8a7ec44ceadfdf2382a5bf6b66d4b1edaf39fbca26e186e4a2a62205f8S3BucketFF7D6F7F"
+                        "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
                       },
-                      "s3Key": {
-                        "Fn::Join": [
-                          "",
-                          [
-                            {
-                              "Fn::Select": [
-                                0,
-                                {
-                                  "Fn::Split": [
-                                    "||",
-                                    {
-                                      "Ref": "AssetParameters3b38dd8a7ec44ceadfdf2382a5bf6b66d4b1edaf39fbca26e186e4a2a62205f8S3VersionKeyBA27AA28"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "Fn::Select": [
-                                1,
-                                {
-                                  "Fn::Split": [
-                                    "||",
-                                    {
-                                      "Ref": "AssetParameters3b38dd8a7ec44ceadfdf2382a5bf6b66d4b1edaf39fbca26e186e4a2a62205f8S3VersionKeyBA27AA28"
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        ]
-                      }
+                      "s3Key": "88d80d8191b3cb5a54df9881414d72a4f8a4c122789ff6a46751ae9c4848a869.zip"
                     },
                     "role": {
                       "Fn::GetAtt": [
@@ -319,7 +177,7 @@
                         "Ref": "SharedDACC02AA"
                       }
                     ],
-                    "runtime": "python3.6"
+                    "runtime": "python3.9"
                   }
                 },
                 "constructInfo": {
