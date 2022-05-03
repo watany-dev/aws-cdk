@@ -140,24 +140,6 @@
             "type": "aws:cdk:logicalId",
             "data": "CheckBootstrapVersion"
           }
-        ],
-        "PYTHON36ServiceRole814B3AD9": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "PYTHON36ServiceRole814B3AD9",
-            "trace": [
-              "!!DESTRUCTIVE_CHANGES: WILL_DESTROY"
-            ]
-          }
-        ],
-        "PYTHON364935EF15": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "PYTHON364935EF15",
-            "trace": [
-              "!!DESTRUCTIVE_CHANGES: WILL_DESTROY"
-            ]
-          }
         ]
       },
       "displayName": "aws-cdk-lambda-runtime-inlinecode"

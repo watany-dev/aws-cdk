@@ -1,0 +1,19 @@
+{
+  "version": "17.0.0",
+  "files": {
+    "31300516a517903d0be4ee02981fb22b5806753f7a365c741aeebd73a96eb4b0": {
+      "source": {
+        "path": "aws-ecs-integ-ecs.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "current_account-current_region": {
+          "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}",
+          "objectKey": "31300516a517903d0be4ee02981fb22b5806753f7a365c741aeebd73a96eb4b0.json",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}

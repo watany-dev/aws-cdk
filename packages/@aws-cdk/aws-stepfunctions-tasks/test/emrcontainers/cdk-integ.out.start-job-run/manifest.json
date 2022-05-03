@@ -1,0 +1,2141 @@
+{
+  "version": "17.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/3f6ffb0e57f71fc3275d984d73f190bd244537ed8a915d6c4645fd2f0c4e99af.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test.assets"
+      ],
+      "metadata": {
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/integration-test-eks-cluster/DefaultVpc/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "integrationtesteksclusterDefaultVpc395E1A86",
+            "trace": [
+              "new Vpc (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:407:25)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:381:33)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/integration-test-eks-cluster/DefaultVpc/PublicSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "integrationtesteksclusterDefaultVpcPublicSubnet1Subnet58061317",
+            "trace": [
+              "new Subnet (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:779:24)",
+              "new PublicSubnet (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:963:9)",
+              "/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:681:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:655:32)",
+              "Vpc.createSubnets (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:651:18)",
+              "new Vpc (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:433:14)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:381:33)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/integration-test-eks-cluster/DefaultVpc/PublicSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "integrationtesteksclusterDefaultVpcPublicSubnet1RouteTable1D5A7569",
+            "trace": [
+              "new Subnet (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:795:23)",
+              "new PublicSubnet (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:963:9)",
+              "/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:681:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:655:32)",
+              "Vpc.createSubnets (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:651:18)",
+              "new Vpc (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:433:14)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:381:33)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/integration-test-eks-cluster/DefaultVpc/PublicSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "integrationtesteksclusterDefaultVpcPublicSubnet1RouteTableAssociation4831B6A7",
+            "trace": [
+              "new Subnet (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:800:9)",
+              "new PublicSubnet (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:963:9)",
+              "/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:681:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:655:32)",
+              "Vpc.createSubnets (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:651:18)",
+              "new Vpc (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:433:14)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:381:33)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/integration-test-eks-cluster/DefaultVpc/PublicSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "integrationtesteksclusterDefaultVpcPublicSubnet1DefaultRoute33CE7FC3",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:836:23)",
+              "/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:445:30",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:444:32)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:381:33)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/integration-test-eks-cluster/DefaultVpc/PublicSubnet1/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "integrationtesteksclusterDefaultVpcPublicSubnet1EIP62A0A17B",
+            "trace": [
+              "PublicSubnet.addNatGateway (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:995:102)",
+              "NatGatewayProvider.configureNat (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/nat.js:107:33)",
+              "Vpc.createNatGateways (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:629:18)",
+              "new Vpc (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:450:22)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:381:33)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/integration-test-eks-cluster/DefaultVpc/PublicSubnet1/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "integrationtesteksclusterDefaultVpcPublicSubnet1NATGatewayC9C984F9",
+            "trace": [
+              "PublicSubnet.addNatGateway (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:993:21)",
+              "NatGatewayProvider.configureNat (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/nat.js:107:33)",
+              "Vpc.createNatGateways (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:629:18)",
+              "new Vpc (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:450:22)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:381:33)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/integration-test-eks-cluster/DefaultVpc/PublicSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "integrationtesteksclusterDefaultVpcPublicSubnet2Subnet68EAAF11",
+            "trace": [
+              "new Subnet (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:779:24)",
+              "new PublicSubnet (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:963:9)",
+              "/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:681:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:655:32)",
+              "Vpc.createSubnets (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:651:18)",
+              "new Vpc (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:433:14)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:381:33)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/integration-test-eks-cluster/DefaultVpc/PublicSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "integrationtesteksclusterDefaultVpcPublicSubnet2RouteTableA4C7B327",
+            "trace": [
+              "new Subnet (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:795:23)",
+              "new PublicSubnet (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:963:9)",
+              "/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:681:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:655:32)",
+              "Vpc.createSubnets (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:651:18)",
+              "new Vpc (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:433:14)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:381:33)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/integration-test-eks-cluster/DefaultVpc/PublicSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "integrationtesteksclusterDefaultVpcPublicSubnet2RouteTableAssociation62710C52",
+            "trace": [
+              "new Subnet (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:800:9)",
+              "new PublicSubnet (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:963:9)",
+              "/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:681:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:655:32)",
+              "Vpc.createSubnets (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:651:18)",
+              "new Vpc (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:433:14)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:381:33)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/integration-test-eks-cluster/DefaultVpc/PublicSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "integrationtesteksclusterDefaultVpcPublicSubnet2DefaultRoute253A231E",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:836:23)",
+              "/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:445:30",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:444:32)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:381:33)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/integration-test-eks-cluster/DefaultVpc/PublicSubnet2/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "integrationtesteksclusterDefaultVpcPublicSubnet2EIPFC53AC43",
+            "trace": [
+              "PublicSubnet.addNatGateway (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:995:102)",
+              "NatGatewayProvider.configureNat (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/nat.js:107:33)",
+              "Vpc.createNatGateways (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:629:18)",
+              "new Vpc (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:450:22)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:381:33)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/integration-test-eks-cluster/DefaultVpc/PublicSubnet2/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "integrationtesteksclusterDefaultVpcPublicSubnet2NATGatewayE109B761",
+            "trace": [
+              "PublicSubnet.addNatGateway (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:993:21)",
+              "NatGatewayProvider.configureNat (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/nat.js:107:33)",
+              "Vpc.createNatGateways (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:629:18)",
+              "new Vpc (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:450:22)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:381:33)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/integration-test-eks-cluster/DefaultVpc/PrivateSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "integrationtesteksclusterDefaultVpcPrivateSubnet1Subnet4E00CAFB",
+            "trace": [
+              "new Subnet (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:779:24)",
+              "new PrivateSubnet (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:1010:9)",
+              "/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:686:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:655:32)",
+              "Vpc.createSubnets (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:651:18)",
+              "new Vpc (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:433:14)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:381:33)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/integration-test-eks-cluster/DefaultVpc/PrivateSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "integrationtesteksclusterDefaultVpcPrivateSubnet1RouteTable4A47F4AC",
+            "trace": [
+              "new Subnet (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:795:23)",
+              "new PrivateSubnet (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:1010:9)",
+              "/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:686:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:655:32)",
+              "Vpc.createSubnets (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:651:18)",
+              "new Vpc (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:433:14)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:381:33)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/integration-test-eks-cluster/DefaultVpc/PrivateSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "integrationtesteksclusterDefaultVpcPrivateSubnet1RouteTableAssociation7482DD1E",
+            "trace": [
+              "new Subnet (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:800:9)",
+              "new PrivateSubnet (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:1010:9)",
+              "/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:686:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:655:32)",
+              "Vpc.createSubnets (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:651:18)",
+              "new Vpc (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:433:14)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:381:33)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/integration-test-eks-cluster/DefaultVpc/PrivateSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "integrationtesteksclusterDefaultVpcPrivateSubnet1DefaultRouteCC99A72C",
+            "trace": [
+              "PrivateSubnet.addRoute (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:886:23)",
+              "NatGatewayProvider.configureSubnet (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/nat.js:119:16)",
+              "NatGatewayProvider.configureNat (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/nat.js:113:18)",
+              "Vpc.createNatGateways (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:629:18)",
+              "new Vpc (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:450:22)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:381:33)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/integration-test-eks-cluster/DefaultVpc/PrivateSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "integrationtesteksclusterDefaultVpcPrivateSubnet2Subnet0C3539A8",
+            "trace": [
+              "new Subnet (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:779:24)",
+              "new PrivateSubnet (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:1010:9)",
+              "/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:686:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:655:32)",
+              "Vpc.createSubnets (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:651:18)",
+              "new Vpc (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:433:14)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:381:33)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/integration-test-eks-cluster/DefaultVpc/PrivateSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "integrationtesteksclusterDefaultVpcPrivateSubnet2RouteTableD7E59903",
+            "trace": [
+              "new Subnet (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:795:23)",
+              "new PrivateSubnet (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:1010:9)",
+              "/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:686:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:655:32)",
+              "Vpc.createSubnets (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:651:18)",
+              "new Vpc (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:433:14)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:381:33)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/integration-test-eks-cluster/DefaultVpc/PrivateSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "integrationtesteksclusterDefaultVpcPrivateSubnet2RouteTableAssociation99F934D5",
+            "trace": [
+              "new Subnet (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:800:9)",
+              "new PrivateSubnet (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:1010:9)",
+              "/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:686:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:655:32)",
+              "Vpc.createSubnets (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:651:18)",
+              "new Vpc (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:433:14)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:381:33)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/integration-test-eks-cluster/DefaultVpc/PrivateSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "integrationtesteksclusterDefaultVpcPrivateSubnet2DefaultRoute50FF167F",
+            "trace": [
+              "PrivateSubnet.addRoute (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:886:23)",
+              "NatGatewayProvider.configureSubnet (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/nat.js:119:16)",
+              "NatGatewayProvider.configureNat (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/nat.js:113:18)",
+              "Vpc.createNatGateways (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:629:18)",
+              "new Vpc (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:450:22)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:381:33)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/integration-test-eks-cluster/DefaultVpc/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "integrationtesteksclusterDefaultVpcIGW9ADAFE6F",
+            "trace": [
+              "new Vpc (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:437:25)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:381:33)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/integration-test-eks-cluster/DefaultVpc/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "integrationtesteksclusterDefaultVpcVPCGWE4DC2204",
+            "trace": [
+              "new Vpc (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/vpc.js:440:25)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:381:33)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/integration-test-eks-cluster/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "integrationtesteksclusterRole03F70AF0",
+            "trace": [
+              "new Role (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/role.js:58:22)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:386:35)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/integration-test-eks-cluster/ControlPlaneSecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "integrationtesteksclusterControlPlaneSecurityGroup6E92F333",
+            "trace": [
+              "new SecurityGroup (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-ec2/lib/security-group.js:202:30)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:392:54)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/integration-test-eks-cluster/Resource/CreationRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "integrationtesteksclusterCreationRoleB98FE02A",
+            "trace": [
+              "new Role (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/role.js:58:22)",
+              "ClusterResource.createAdminRole (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource.js:81:30)",
+              "new ClusterResource (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource.js:27:31)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:438:50)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/integration-test-eks-cluster/Resource/CreationRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "integrationtesteksclusterCreationRoleDefaultPolicy5417802D",
+            "trace": [
+              "new Policy (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/policy.js:58:26)",
+              "Role.addToPrincipalPolicy (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/role.js:224:34)",
+              "Role.addToPolicy (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/role.js:240:21)",
+              "ClusterResource.createAdminRole (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource.js:86:22)",
+              "new ClusterResource (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource.js:27:31)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:438:50)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/integration-test-eks-cluster/Resource/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "integrationtesteksclusterE5C0ED98",
+            "trace": [
+              "new CustomResource (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/custom-resource.js:50:25)",
+              "new ClusterResource (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource.js:36:26)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:438:50)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/integration-test-eks-cluster/KubectlReadyBarrier": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "integrationtesteksclusterKubectlReadyBarrier0D4A21B0",
+            "trace": [
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:483:37)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/integration-test-eks-cluster/MastersRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "integrationtesteksclusterMastersRole63B9B0BF",
+            "trace": [
+              "new Role (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/role.js:58:22)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:519:87)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/integration-test-eks-cluster/AwsAuth/manifest/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "integrationtesteksclusterAwsAuthmanifestAEF9C6DF",
+            "trace": [
+              "new CustomResource (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/custom-resource.js:50:25)",
+              "new KubernetesManifest (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/k8s-manifest.js:45:32)",
+              "new AwsAuth (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/aws-auth.js:33:9)",
+              "Cluster.get awsAuth [as awsAuth] (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:701:29)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:523:14)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/integration-test-eks-cluster/NodegroupDefaultCapacity/NodeGroupRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "integrationtesteksclusterNodegroupDefaultCapacityNodeGroupRole75D45BA7",
+            "trace": [
+              "new Role (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/role.js:58:22)",
+              "new Nodegroup (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/managed-nodegroup.js:138:28)",
+              "Cluster.addNodegroupCapacity (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:691:16)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:538:22)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/integration-test-eks-cluster/NodegroupDefaultCapacity/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "integrationtesteksclusterNodegroupDefaultCapacity536CF32C",
+            "trace": [
+              "new Nodegroup (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/managed-nodegroup.js:149:26)",
+              "Cluster.addNodegroupCapacity (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:691:16)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:538:22)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/integration-test-eks-cluster/ConfigCommand": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "integrationtesteksclusterConfigCommandFA814999",
+            "trace": [
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:543:13)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/integration-test-eks-cluster/GetTokenCommand": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "integrationtesteksclusterGetTokenCommandD7B92682",
+            "trace": [
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:544:13)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/integration-test-eks-cluster/manifest-emrRole/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "integrationtesteksclustermanifestemrRoleCCE4E328",
+            "trace": [
+              "new CustomResource (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/custom-resource.js:50:25)",
+              "new KubernetesManifest (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/k8s-manifest.js:45:32)",
+              "Cluster.addManifest (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:194:16)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:41:28)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/integration-test-eks-cluster/manifest-emrRoleBind/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "integrationtesteksclustermanifestemrRoleBind8B35D2A2",
+            "trace": [
+              "new CustomResource (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/custom-resource.js:50:25)",
+              "new KubernetesManifest (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/k8s-manifest.js:45:32)",
+              "Cluster.addManifest (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:194:16)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:55:32)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/@aws-cdk--aws-eks.ClusterResourceProvider/NodeProxyAgentLayer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NodeProxyAgentLayer924C1971",
+            "trace": [
+              "new LayerVersion (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-lambda/lib/layers.js:58:26)",
+              "new NodeProxyAgentLayer (/home/ec2-user/aws-cdk2/packages/@aws-cdk/lambda-layer-node-proxy-agent/lib/node-proxy-agent-layer.js:15:9)",
+              "new ClusterResourceProvider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource-provider.js:22:37)",
+              "Function.getOrCreate (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource-provider.js:70:85)",
+              "new ClusterResource (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource.js:28:78)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:438:50)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/@aws-cdk--aws-eks.ClusterResourceProvider/OnEventHandler/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OnEventHandlerServiceRole15A26729",
+            "trace": [
+              "new Role (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/role.js:58:22)",
+              "new Function (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-lambda/lib/function.js:90:35)",
+              "new ClusterResourceProvider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource-provider.js:23:25)",
+              "Function.getOrCreate (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource-provider.js:70:85)",
+              "new ClusterResource (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource.js:28:78)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:438:50)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/@aws-cdk--aws-eks.ClusterResourceProvider/OnEventHandler/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OnEventHandlerServiceRoleDefaultPolicyC57085D4",
+            "trace": [
+              "new Policy (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/policy.js:58:26)",
+              "Role.addToPrincipalPolicy (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/role.js:224:34)",
+              "Function.addToPrincipal (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/grant.js:103:65)",
+              "Role.grant (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/role.js:291:30)",
+              "new ClusterResourceProvider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource-provider.js:63:25)",
+              "Function.getOrCreate (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource-provider.js:70:85)",
+              "new ClusterResource (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource.js:28:78)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:438:50)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/@aws-cdk--aws-eks.ClusterResourceProvider/OnEventHandler/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OnEventHandler42BEBAE0",
+            "trace": [
+              "new Function (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-lambda/lib/function.js:166:26)",
+              "new ClusterResourceProvider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource-provider.js:23:25)",
+              "Function.getOrCreate (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource-provider.js:70:85)",
+              "new ClusterResource (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource.js:28:78)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:438:50)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/@aws-cdk--aws-eks.ClusterResourceProvider/IsCompleteHandler/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IsCompleteHandlerServiceRole5810CC58",
+            "trace": [
+              "new Role (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/role.js:58:22)",
+              "new Function (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-lambda/lib/function.js:90:35)",
+              "new ClusterResourceProvider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource-provider.js:39:28)",
+              "Function.getOrCreate (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource-provider.js:70:85)",
+              "new ClusterResource (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource.js:28:78)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:438:50)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/@aws-cdk--aws-eks.ClusterResourceProvider/IsCompleteHandler/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IsCompleteHandlerServiceRoleDefaultPolicy8F64197B",
+            "trace": [
+              "new Policy (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/policy.js:58:26)",
+              "Role.addToPrincipalPolicy (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/role.js:224:34)",
+              "Function.addToPrincipal (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/grant.js:103:65)",
+              "Role.grant (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/role.js:291:30)",
+              "new ClusterResourceProvider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource-provider.js:64:25)",
+              "Function.getOrCreate (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource-provider.js:70:85)",
+              "new ClusterResource (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource.js:28:78)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:438:50)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/@aws-cdk--aws-eks.ClusterResourceProvider/IsCompleteHandler/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IsCompleteHandler7073F4DA",
+            "trace": [
+              "new Function (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-lambda/lib/function.js:166:26)",
+              "new ClusterResourceProvider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource-provider.js:39:28)",
+              "Function.getOrCreate (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource-provider.js:70:85)",
+              "new ClusterResource (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource.js:28:78)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:438:50)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onEvent/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderframeworkonEventServiceRole9FF04296",
+            "trace": [
+              "new Role (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/role.js:58:22)",
+              "new Function (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-lambda/lib/function.js:90:35)",
+              "Provider.createFunction (/home/ec2-user/aws-cdk2/packages/@aws-cdk/custom-resources/lib/provider-framework/provider.js:82:20)",
+              "new Provider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/custom-resources/lib/provider-framework/provider.js:44:38)",
+              "new ClusterResourceProvider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource-provider.js:54:25)",
+              "Function.getOrCreate (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource-provider.js:70:85)",
+              "new ClusterResource (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource.js:28:78)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:438:50)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onEvent/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderframeworkonEventServiceRoleDefaultPolicy48CD2133",
+            "trace": [
+              "new Policy (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/policy.js:58:26)",
+              "Role.addToPrincipalPolicy (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/role.js:224:34)",
+              "Function.addToPrincipal (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/grant.js:103:65)",
+              "Function.addToPrincipalOrResource (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/grant.js:51:30)",
+              "Function.grant (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-lambda/lib/function-base.js:246:33)",
+              "Function.grantInvoke (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-lambda/lib/function-base.js:152:26)",
+              "Provider.createFunction (/home/ec2-user/aws-cdk2/packages/@aws-cdk/custom-resources/lib/provider-framework/provider.js:98:29)",
+              "new Provider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/custom-resources/lib/provider-framework/provider.js:44:38)",
+              "new ClusterResourceProvider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource-provider.js:54:25)",
+              "Function.getOrCreate (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource-provider.js:70:85)",
+              "new ClusterResource (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource.js:28:78)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:438:50)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onEvent/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderframeworkonEvent83C1D0A7",
+            "trace": [
+              "new Function (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-lambda/lib/function.js:166:26)",
+              "Provider.createFunction (/home/ec2-user/aws-cdk2/packages/@aws-cdk/custom-resources/lib/provider-framework/provider.js:82:20)",
+              "new Provider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/custom-resources/lib/provider-framework/provider.js:44:38)",
+              "new ClusterResourceProvider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource-provider.js:54:25)",
+              "Function.getOrCreate (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource-provider.js:70:85)",
+              "new ClusterResource (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource.js:28:78)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:438:50)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-isComplete/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderframeworkisCompleteServiceRoleB1087139",
+            "trace": [
+              "new Role (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/role.js:58:22)",
+              "new Function (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-lambda/lib/function.js:90:35)",
+              "Provider.createFunction (/home/ec2-user/aws-cdk2/packages/@aws-cdk/custom-resources/lib/provider-framework/provider.js:82:20)",
+              "new Provider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/custom-resources/lib/provider-framework/provider.js:46:45)",
+              "new ClusterResourceProvider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource-provider.js:54:25)",
+              "Function.getOrCreate (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource-provider.js:70:85)",
+              "new ClusterResource (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource.js:28:78)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:438:50)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-isComplete/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderframeworkisCompleteServiceRoleDefaultPolicy2E7140AC",
+            "trace": [
+              "new Policy (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/policy.js:58:26)",
+              "Role.addToPrincipalPolicy (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/role.js:224:34)",
+              "Function.addToPrincipal (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/grant.js:103:65)",
+              "Function.addToPrincipalOrResource (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/grant.js:51:30)",
+              "Function.grant (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-lambda/lib/function-base.js:246:33)",
+              "Function.grantInvoke (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-lambda/lib/function-base.js:152:26)",
+              "Provider.createFunction (/home/ec2-user/aws-cdk2/packages/@aws-cdk/custom-resources/lib/provider-framework/provider.js:98:29)",
+              "new Provider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/custom-resources/lib/provider-framework/provider.js:46:45)",
+              "new ClusterResourceProvider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource-provider.js:54:25)",
+              "Function.getOrCreate (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource-provider.js:70:85)",
+              "new ClusterResource (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource.js:28:78)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:438:50)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-isComplete/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderframeworkisComplete26D7B0CB",
+            "trace": [
+              "new Function (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-lambda/lib/function.js:166:26)",
+              "Provider.createFunction (/home/ec2-user/aws-cdk2/packages/@aws-cdk/custom-resources/lib/provider-framework/provider.js:82:20)",
+              "new Provider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/custom-resources/lib/provider-framework/provider.js:46:45)",
+              "new ClusterResourceProvider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource-provider.js:54:25)",
+              "Function.getOrCreate (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource-provider.js:70:85)",
+              "new ClusterResource (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource.js:28:78)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:438:50)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onTimeout/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderframeworkonTimeoutServiceRole28643D26",
+            "trace": [
+              "new Role (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/role.js:58:22)",
+              "new Function (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-lambda/lib/function.js:90:35)",
+              "Provider.createFunction (/home/ec2-user/aws-cdk2/packages/@aws-cdk/custom-resources/lib/provider-framework/provider.js:82:20)",
+              "new Provider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/custom-resources/lib/provider-framework/provider.js:47:42)",
+              "new ClusterResourceProvider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource-provider.js:54:25)",
+              "Function.getOrCreate (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource-provider.js:70:85)",
+              "new ClusterResource (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource.js:28:78)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:438:50)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onTimeout/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderframeworkonTimeoutServiceRoleDefaultPolicy2688969F",
+            "trace": [
+              "new Policy (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/policy.js:58:26)",
+              "Role.addToPrincipalPolicy (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/role.js:224:34)",
+              "Function.addToPrincipal (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/grant.js:103:65)",
+              "Function.addToPrincipalOrResource (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/grant.js:51:30)",
+              "Function.grant (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-lambda/lib/function-base.js:246:33)",
+              "Function.grantInvoke (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-lambda/lib/function-base.js:152:26)",
+              "Provider.createFunction (/home/ec2-user/aws-cdk2/packages/@aws-cdk/custom-resources/lib/provider-framework/provider.js:98:29)",
+              "new Provider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/custom-resources/lib/provider-framework/provider.js:47:42)",
+              "new ClusterResourceProvider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource-provider.js:54:25)",
+              "Function.getOrCreate (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource-provider.js:70:85)",
+              "new ClusterResource (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource.js:28:78)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:438:50)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onTimeout/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderframeworkonTimeout0B47CA38",
+            "trace": [
+              "new Function (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-lambda/lib/function.js:166:26)",
+              "Provider.createFunction (/home/ec2-user/aws-cdk2/packages/@aws-cdk/custom-resources/lib/provider-framework/provider.js:82:20)",
+              "new Provider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/custom-resources/lib/provider-framework/provider.js:47:42)",
+              "new ClusterResourceProvider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource-provider.js:54:25)",
+              "Function.getOrCreate (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource-provider.js:70:85)",
+              "new ClusterResource (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource.js:28:78)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:438:50)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/waiter-state-machine/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderwaiterstatemachineRole0C7159F9",
+            "trace": [
+              "new Role (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/role.js:58:22)",
+              "new WaiterStateMachine (/home/ec2-user/aws-cdk2/packages/@aws-cdk/custom-resources/lib/provider-framework/waiter-state-machine.js:19:22)",
+              "new Provider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/custom-resources/lib/provider-framework/provider.js:49:40)",
+              "new ClusterResourceProvider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource-provider.js:54:25)",
+              "Function.getOrCreate (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource-provider.js:70:85)",
+              "new ClusterResource (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource.js:28:78)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:438:50)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/waiter-state-machine/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderwaiterstatemachineRoleDefaultPolicyD3C3DA1A",
+            "trace": [
+              "new Policy (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/policy.js:58:26)",
+              "Role.addToPrincipalPolicy (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/role.js:224:34)",
+              "Function.addToPrincipal (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/grant.js:103:65)",
+              "Function.addToPrincipalOrResource (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/grant.js:51:30)",
+              "Function.grant (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-lambda/lib/function-base.js:246:33)",
+              "Function.grantInvoke (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-lambda/lib/function-base.js:152:26)",
+              "new WaiterStateMachine (/home/ec2-user/aws-cdk2/packages/@aws-cdk/custom-resources/lib/provider-framework/waiter-state-machine.js:22:33)",
+              "new Provider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/custom-resources/lib/provider-framework/provider.js:49:40)",
+              "new ClusterResourceProvider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource-provider.js:54:25)",
+              "Function.getOrCreate (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource-provider.js:70:85)",
+              "new ClusterResource (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource.js:28:78)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:438:50)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/waiter-state-machine/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Providerwaiterstatemachine5D4A9DF0",
+            "trace": [
+              "new WaiterStateMachine (/home/ec2-user/aws-cdk2/packages/@aws-cdk/custom-resources/lib/provider-framework/waiter-state-machine.js:49:26)",
+              "new Provider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/custom-resources/lib/provider-framework/provider.js:49:40)",
+              "new ClusterResourceProvider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource-provider.js:54:25)",
+              "Function.getOrCreate (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource-provider.js:70:85)",
+              "new ClusterResource (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource.js:28:78)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:438:50)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/@aws-cdk--aws-eks.ClusterResourceProvider/Service-principalMap": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceprincipalMap",
+            "trace": [
+              "Object.deployTimeLookup (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/region-lookup.js:35:19)",
+              "ClusterResourceProvider.regionalFact (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/stack.js:640:32)",
+              "ServicePrincipalToken.resolve (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/principals.js:746:22)",
+              "RememberingTokenResolver.resolveToken (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/resolvable.js:64:30)",
+              "RememberingTokenResolver.resolveToken (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:198:22)",
+              "resolve (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:131:55)",
+              "Object.resolve [as mapToken] (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:58:48)",
+              "TokenizedStringFragments.mapTokens (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/string-fragments.js:78:43)",
+              "RememberingTokenResolver.resolveString (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/resolvable.js:93:26)",
+              "RememberingTokenResolver.resolveString (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:201:27)",
+              "resolve (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:98:54)",
+              "Object.resolve (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:58:48)",
+              "resolve (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:146:51)",
+              "Object.resolve (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:58:48)",
+              "resolve (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:146:51)",
+              "Object.resolve (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:58:48)",
+              "/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:122:51",
+              "Array.map (<anonymous>)",
+              "resolve (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:122:14)",
+              "Object.resolve (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:58:48)",
+              "resolve (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:146:51)",
+              "Object.resolve (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:58:48)",
+              "RememberingTokenResolver.resolveToken (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/resolvable.js:66:32)",
+              "RememberingTokenResolver.resolveToken (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:198:22)",
+              "resolve (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:131:55)",
+              "Object.resolve (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:58:48)",
+              "resolve (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:146:51)",
+              "Object.resolve (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:58:48)",
+              "RememberingTokenResolver.resolveToken (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/resolvable.js:66:32)",
+              "RememberingTokenResolver.resolveToken (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:198:22)",
+              "resolve (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:131:55)",
+              "Object.resolve (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:58:48)",
+              "resolve (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:146:51)",
+              "Object.resolve (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:58:48)",
+              "RememberingTokenResolver.resolveToken (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/resolvable.js:66:32)",
+              "RememberingTokenResolver.resolveToken (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:198:22)",
+              "resolve (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:131:55)",
+              "Object.resolve (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:58:48)",
+              "resolve (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:146:51)",
+              "Object.resolve (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:58:48)",
+              "resolve (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:146:51)",
+              "Object.findTokens (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:184:5)",
+              "findAllReferences (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/refs.js:97:38)",
+              "Object.resolveReferences (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/refs.js:20:19)",
+              "Object.prepareApp (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/prepare-app.js:30:12)",
+              "Object.synthesize (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/synthesis.js:21:19)",
+              "App.synth (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/stage.js:105:41)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:88:5)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/@aws-cdk--aws-eks.ClusterResourceProvider/awsstepfunctionstasksemrcontainersstartjobrunintegtestawscdkawseksClusterResourceProviderframeworkonEventD439F3D7Arn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "awsstepfunctionstasksemrcontainersstartjobrunintegtestawscdkawseksClusterResourceProviderframeworkonEventD439F3D7Arn",
+            "trace": [
+              "createNestedStackOutput (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/refs.js:170:18)",
+              "resolveValue (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/refs.js:72:29)",
+              "Object.resolveReferences (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/refs.js:25:30)",
+              "Object.prepareApp (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/prepare-app.js:30:12)",
+              "Object.synthesize (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/synthesis.js:21:19)",
+              "App.synth (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/stage.js:105:41)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:88:5)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/@aws-cdk--aws-eks.ClusterResourceProvider/reference-to-awsstepfunctionstasksemrcontainersstartjobrunintegtestintegrationtesteksclusterCreationRole19DB152EArn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoawsstepfunctionstasksemrcontainersstartjobrunintegtestintegrationtesteksclusterCreationRole19DB152EArn",
+            "trace": [
+              "createNestedStackParameter (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/refs.js:153:17)",
+              "resolveValue (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/refs.js:57:16)",
+              "Object.resolveReferences (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/refs.js:25:30)",
+              "Object.prepareApp (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/prepare-app.js:30:12)",
+              "Object.synthesize (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/synthesis.js:21:19)",
+              "App.synth (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/stage.js:105:41)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:88:5)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/@aws-cdk--aws-eks.ClusterResourceProvider.NestedStack/@aws-cdk--aws-eks.ClusterResourceProvider.NestedStackResource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "awscdkawseksClusterResourceProviderNestedStackawscdkawseksClusterResourceProviderNestedStackResource9827C454",
+            "trace": [
+              "new NestedStack (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/nested-stack.js:65:25)",
+              "new ClusterResourceProvider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource-provider.js:20:9)",
+              "Function.getOrCreate (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource-provider.js:70:85)",
+              "new ClusterResource (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster-resource.js:28:78)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:438:50)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/@aws-cdk--aws-eks.KubectlProvider/Handler/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HandlerServiceRoleFCDC14AE",
+            "trace": [
+              "new Role (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/role.js:58:22)",
+              "new Function (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-lambda/lib/function.js:90:35)",
+              "new KubectlProvider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/kubectl-provider.js:41:25)",
+              "Cluster.defineKubectlProvider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:798:16)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:509:46)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/@aws-cdk--aws-eks.KubectlProvider/Handler/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HandlerServiceRoleDefaultPolicyCBD0CC91",
+            "trace": [
+              "new Policy (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/policy.js:58:26)",
+              "Role.addToPrincipalPolicy (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/role.js:224:34)",
+              "new KubectlProvider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/kubectl-provider.js:64:26)",
+              "Cluster.defineKubectlProvider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:798:16)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:509:46)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/@aws-cdk--aws-eks.KubectlProvider/Handler/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Handler886CB40B",
+            "trace": [
+              "new Function (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-lambda/lib/function.js:166:26)",
+              "new KubectlProvider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/kubectl-provider.js:41:25)",
+              "Cluster.defineKubectlProvider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:798:16)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:509:46)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/@aws-cdk--aws-eks.KubectlProvider/AwsCliLayer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AwsCliLayerF44AAF94",
+            "trace": [
+              "new LayerVersion (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-lambda/lib/layers.js:58:26)",
+              "new AwsCliLayer (/home/ec2-user/aws-cdk2/packages/@aws-cdk/lambda-layer-awscli/lib/awscli-layer.js:14:9)",
+              "new KubectlProvider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/kubectl-provider.js:57:31)",
+              "Cluster.defineKubectlProvider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:798:16)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:509:46)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/@aws-cdk--aws-eks.KubectlProvider/KubectlLayer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KubectlLayer600207B5",
+            "trace": [
+              "new LayerVersion (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-lambda/lib/layers.js:58:26)",
+              "new KubectlLayer (/home/ec2-user/aws-cdk2/packages/@aws-cdk/lambda-layer-kubectl/lib/kubectl-layer.js:15:9)",
+              "new KubectlProvider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/kubectl-provider.js:58:31)",
+              "Cluster.defineKubectlProvider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:798:16)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:509:46)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/@aws-cdk--aws-eks.KubectlProvider/Provider/framework-onEvent/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderframeworkonEventServiceRole9FF04296",
+            "trace": [
+              "new Role (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/role.js:58:22)",
+              "new Function (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-lambda/lib/function.js:90:35)",
+              "Provider.createFunction (/home/ec2-user/aws-cdk2/packages/@aws-cdk/custom-resources/lib/provider-framework/provider.js:82:20)",
+              "new Provider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/custom-resources/lib/provider-framework/provider.js:44:38)",
+              "new KubectlProvider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/kubectl-provider.js:72:26)",
+              "Cluster.defineKubectlProvider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:798:16)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:509:46)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/@aws-cdk--aws-eks.KubectlProvider/Provider/framework-onEvent/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderframeworkonEventServiceRoleDefaultPolicy48CD2133",
+            "trace": [
+              "new Policy (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/policy.js:58:26)",
+              "Role.addToPrincipalPolicy (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/role.js:224:34)",
+              "Function.addToPrincipal (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/grant.js:103:65)",
+              "Function.addToPrincipalOrResource (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/grant.js:51:30)",
+              "Function.grant (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-lambda/lib/function-base.js:246:33)",
+              "Function.grantInvoke (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-lambda/lib/function-base.js:152:26)",
+              "Provider.createFunction (/home/ec2-user/aws-cdk2/packages/@aws-cdk/custom-resources/lib/provider-framework/provider.js:98:29)",
+              "new Provider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/custom-resources/lib/provider-framework/provider.js:44:38)",
+              "new KubectlProvider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/kubectl-provider.js:72:26)",
+              "Cluster.defineKubectlProvider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:798:16)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:509:46)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/@aws-cdk--aws-eks.KubectlProvider/Provider/framework-onEvent/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderframeworkonEvent83C1D0A7",
+            "trace": [
+              "new Function (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-lambda/lib/function.js:166:26)",
+              "Provider.createFunction (/home/ec2-user/aws-cdk2/packages/@aws-cdk/custom-resources/lib/provider-framework/provider.js:82:20)",
+              "new Provider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/custom-resources/lib/provider-framework/provider.js:44:38)",
+              "new KubectlProvider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/kubectl-provider.js:72:26)",
+              "Cluster.defineKubectlProvider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:798:16)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:509:46)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/@aws-cdk--aws-eks.KubectlProvider/awsstepfunctionstasksemrcontainersstartjobrunintegtestawscdkawseksKubectlProviderframeworkonEvent69C4EA38Arn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "awsstepfunctionstasksemrcontainersstartjobrunintegtestawscdkawseksKubectlProviderframeworkonEvent69C4EA38Arn",
+            "trace": [
+              "createNestedStackOutput (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/refs.js:170:18)",
+              "resolveValue (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/refs.js:72:29)",
+              "Object.resolveReferences (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/refs.js:25:30)",
+              "Object.prepareApp (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/prepare-app.js:30:12)",
+              "Object.synthesize (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/synthesis.js:21:19)",
+              "App.synth (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/stage.js:105:41)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:88:5)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/@aws-cdk--aws-eks.KubectlProvider/reference-to-awsstepfunctionstasksemrcontainersstartjobrunintegtestintegrationtestekscluster4D8C900FArn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoawsstepfunctionstasksemrcontainersstartjobrunintegtestintegrationtestekscluster4D8C900FArn",
+            "trace": [
+              "createNestedStackParameter (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/refs.js:153:17)",
+              "resolveValue (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/refs.js:57:16)",
+              "Object.resolveReferences (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/refs.js:25:30)",
+              "Object.prepareApp (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/prepare-app.js:30:12)",
+              "Object.synthesize (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/synthesis.js:21:19)",
+              "App.synth (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/stage.js:105:41)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:88:5)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/@aws-cdk--aws-eks.KubectlProvider/reference-to-awsstepfunctionstasksemrcontainersstartjobrunintegtestintegrationtesteksclusterCreationRole19DB152EArn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoawsstepfunctionstasksemrcontainersstartjobrunintegtestintegrationtesteksclusterCreationRole19DB152EArn",
+            "trace": [
+              "createNestedStackParameter (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/refs.js:153:17)",
+              "resolveValue (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/refs.js:57:16)",
+              "Object.resolveReferences (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/refs.js:25:30)",
+              "Object.prepareApp (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/prepare-app.js:30:12)",
+              "Object.synthesize (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/synthesis.js:21:19)",
+              "App.synth (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/stage.js:105:41)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:88:5)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/@aws-cdk--aws-eks.KubectlProvider/reference-to-awsstepfunctionstasksemrcontainersstartjobrunintegtestintegrationtesteksclusterDefaultVpcPrivateSubnet1SubnetDFF56EB6Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoawsstepfunctionstasksemrcontainersstartjobrunintegtestintegrationtesteksclusterDefaultVpcPrivateSubnet1SubnetDFF56EB6Ref",
+            "trace": [
+              "createNestedStackParameter (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/refs.js:153:17)",
+              "resolveValue (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/refs.js:57:16)",
+              "Object.resolveReferences (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/refs.js:25:30)",
+              "Object.prepareApp (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/prepare-app.js:30:12)",
+              "Object.synthesize (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/synthesis.js:21:19)",
+              "App.synth (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/stage.js:105:41)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:88:5)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/@aws-cdk--aws-eks.KubectlProvider/reference-to-awsstepfunctionstasksemrcontainersstartjobrunintegtestintegrationtesteksclusterDefaultVpcPrivateSubnet2Subnet0E779258Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoawsstepfunctionstasksemrcontainersstartjobrunintegtestintegrationtesteksclusterDefaultVpcPrivateSubnet2Subnet0E779258Ref",
+            "trace": [
+              "createNestedStackParameter (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/refs.js:153:17)",
+              "resolveValue (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/refs.js:57:16)",
+              "Object.resolveReferences (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/refs.js:25:30)",
+              "Object.prepareApp (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/prepare-app.js:30:12)",
+              "Object.synthesize (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/synthesis.js:21:19)",
+              "App.synth (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/stage.js:105:41)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:88:5)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/@aws-cdk--aws-eks.KubectlProvider/reference-to-awsstepfunctionstasksemrcontainersstartjobrunintegtestintegrationtestekscluster4D8C900FClusterSecurityGroupId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoawsstepfunctionstasksemrcontainersstartjobrunintegtestintegrationtestekscluster4D8C900FClusterSecurityGroupId",
+            "trace": [
+              "createNestedStackParameter (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/refs.js:153:17)",
+              "resolveValue (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/refs.js:57:16)",
+              "Object.resolveReferences (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/refs.js:25:30)",
+              "Object.prepareApp (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/prepare-app.js:30:12)",
+              "Object.synthesize (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/synthesis.js:21:19)",
+              "App.synth (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/stage.js:105:41)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:88:5)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/@aws-cdk--aws-eks.KubectlProvider.NestedStack/@aws-cdk--aws-eks.KubectlProvider.NestedStackResource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "awscdkawseksKubectlProviderNestedStackawscdkawseksKubectlProviderNestedStackResourceA7AEBA6B",
+            "trace": [
+              "new NestedStack (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/nested-stack.js:65:25)",
+              "new KubectlProvider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/kubectl-provider.js:23:9)",
+              "Cluster.defineKubectlProvider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:798:16)",
+              "new Cluster (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-eks/lib/cluster.js:509:46)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:21:20)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/Virtual Cluster": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VirtualCluster",
+            "trace": [
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:26:24)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/Start a Job Run/Job-Execution-Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StartaJobRunJobExecutionRole157B6BE1",
+            "trace": [
+              "new Role (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/role.js:58:22)",
+              "EmrContainersStartJobRun.createJobExecutionRole (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/lib/emrcontainers/start-job-run.js:192:34)",
+              "new EmrContainersStartJobRun (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/lib/emrcontainers/start-job-run.js:82:91)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:68:24)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/Start a Job Run/Job-Execution-Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StartaJobRunJobExecutionRoleDefaultPolicyEA7882C0",
+            "trace": [
+              "new Policy (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/policy.js:58:26)",
+              "Role.addToPrincipalPolicy (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/role.js:224:34)",
+              "EmrContainersStartJobRun.createJobExecutionRole (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/lib/emrcontainers/start-job-run.js:198:26)",
+              "new EmrContainersStartJobRun (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/lib/emrcontainers/start-job-run.js:82:91)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:68:24)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/Start a Job Run/GetEksClusterInfo/CustomResourcePolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StartaJobRunGetEksClusterInfoCustomResourcePolicy7AA7B106",
+            "trace": [
+              "new Policy (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/policy.js:58:26)",
+              "new AwsCustomResource (/home/ec2-user/aws-cdk2/packages/@aws-cdk/custom-resources/lib/aws-custom-resource/aws-custom-resource.js:202:24)",
+              "EmrContainersStartJobRun.updateRoleTrustPolicy (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/lib/emrcontainers/start-job-run.js:234:32)",
+              "EmrContainersStartJobRun.createJobExecutionRole (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/lib/emrcontainers/start-job-run.js:206:14)",
+              "new EmrContainersStartJobRun (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/lib/emrcontainers/start-job-run.js:82:91)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:68:24)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/Start a Job Run/GetEksClusterInfo/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StartaJobRunGetEksClusterInfoD0E31373",
+            "trace": [
+              "new CustomResource (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/custom-resource.js:50:25)",
+              "new AwsCustomResource (/home/ec2-user/aws-cdk2/packages/@aws-cdk/custom-resources/lib/aws-custom-resource/aws-custom-resource.js:209:31)",
+              "EmrContainersStartJobRun.updateRoleTrustPolicy (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/lib/emrcontainers/start-job-run.js:234:32)",
+              "EmrContainersStartJobRun.createJobExecutionRole (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/lib/emrcontainers/start-job-run.js:206:14)",
+              "new EmrContainersStartJobRun (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/lib/emrcontainers/start-job-run.js:82:91)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:68:24)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/Start a Job Run/awsclilayer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StartaJobRunawsclilayer110EEF0B",
+            "trace": [
+              "new LayerVersion (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-lambda/lib/layers.js:58:26)",
+              "new AwsCliLayer (/home/ec2-user/aws-cdk2/packages/@aws-cdk/lambda-layer-awscli/lib/awscli-layer.js:14:9)",
+              "EmrContainersStartJobRun.updateRoleTrustPolicy (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/lib/emrcontainers/start-job-run.js:254:26)",
+              "EmrContainersStartJobRun.createJobExecutionRole (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/lib/emrcontainers/start-job-run.js:206:14)",
+              "new EmrContainersStartJobRun (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/lib/emrcontainers/start-job-run.js:82:91)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:68:24)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/Start a Job Run/CustomResourceProvider/framework-onEvent/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StartaJobRunCustomResourceProviderframeworkonEventServiceRole1D6E2464",
+            "trace": [
+              "new Role (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/role.js:58:22)",
+              "new Function (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-lambda/lib/function.js:90:35)",
+              "Provider.createFunction (/home/ec2-user/aws-cdk2/packages/@aws-cdk/custom-resources/lib/provider-framework/provider.js:82:20)",
+              "new Provider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/custom-resources/lib/provider-framework/provider.js:44:38)",
+              "EmrContainersStartJobRun.updateRoleTrustPolicy (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/lib/emrcontainers/start-job-run.js:283:26)",
+              "EmrContainersStartJobRun.createJobExecutionRole (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/lib/emrcontainers/start-job-run.js:206:14)",
+              "new EmrContainersStartJobRun (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/lib/emrcontainers/start-job-run.js:82:91)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:68:24)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/Start a Job Run/CustomResourceProvider/framework-onEvent/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StartaJobRunCustomResourceProviderframeworkonEventServiceRoleDefaultPolicy95FB1565",
+            "trace": [
+              "new Policy (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/policy.js:58:26)",
+              "Role.addToPrincipalPolicy (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/role.js:224:34)",
+              "Function.addToPrincipal (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/grant.js:103:65)",
+              "Function.addToPrincipalOrResource (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/grant.js:51:30)",
+              "SingletonFunction.grant (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-lambda/lib/function-base.js:246:33)",
+              "SingletonFunction.grantInvoke (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-lambda/lib/function-base.js:152:26)",
+              "Provider.createFunction (/home/ec2-user/aws-cdk2/packages/@aws-cdk/custom-resources/lib/provider-framework/provider.js:98:29)",
+              "new Provider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/custom-resources/lib/provider-framework/provider.js:44:38)",
+              "EmrContainersStartJobRun.updateRoleTrustPolicy (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/lib/emrcontainers/start-job-run.js:283:26)",
+              "EmrContainersStartJobRun.createJobExecutionRole (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/lib/emrcontainers/start-job-run.js:206:14)",
+              "new EmrContainersStartJobRun (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/lib/emrcontainers/start-job-run.js:82:91)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:68:24)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/Start a Job Run/CustomResourceProvider/framework-onEvent/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StartaJobRunCustomResourceProviderframeworkonEventAC961165",
+            "trace": [
+              "new Function (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-lambda/lib/function.js:166:26)",
+              "Provider.createFunction (/home/ec2-user/aws-cdk2/packages/@aws-cdk/custom-resources/lib/provider-framework/provider.js:82:20)",
+              "new Provider (/home/ec2-user/aws-cdk2/packages/@aws-cdk/custom-resources/lib/provider-framework/provider.js:44:38)",
+              "EmrContainersStartJobRun.updateRoleTrustPolicy (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/lib/emrcontainers/start-job-run.js:283:26)",
+              "EmrContainersStartJobRun.createJobExecutionRole (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/lib/emrcontainers/start-job-run.js:206:14)",
+              "new EmrContainersStartJobRun (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/lib/emrcontainers/start-job-run.js:82:91)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:68:24)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/Start a Job Run/Custom Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StartaJobRunCustomResource3BD90664",
+            "trace": [
+              "new CustomResource (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/custom-resource.js:50:25)",
+              "EmrContainersStartJobRun.updateRoleTrustPolicy (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/lib/emrcontainers/start-job-run.js:286:9)",
+              "EmrContainersStartJobRun.createJobExecutionRole (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/lib/emrcontainers/start-job-run.js:206:14)",
+              "new EmrContainersStartJobRun (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/lib/emrcontainers/start-job-run.js:82:91)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:68:24)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/AWS679f53fac002430cb0da5b7982bd2287/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2",
+            "trace": [
+              "new Role (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/role.js:58:22)",
+              "new Function (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-lambda/lib/function.js:90:35)",
+              "SingletonFunction.ensureLambda (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-lambda/lib/singleton-lambda.js:164:16)",
+              "new SingletonFunction (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-lambda/lib/singleton-lambda.js:32:36)",
+              "new AwsCustomResource (/home/ec2-user/aws-cdk2/packages/@aws-cdk/custom-resources/lib/aws-custom-resource/aws-custom-resource.js:161:26)",
+              "EmrContainersStartJobRun.updateRoleTrustPolicy (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/lib/emrcontainers/start-job-run.js:234:32)",
+              "EmrContainersStartJobRun.createJobExecutionRole (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/lib/emrcontainers/start-job-run.js:206:14)",
+              "new EmrContainersStartJobRun (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/lib/emrcontainers/start-job-run.js:82:91)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:68:24)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/AWS679f53fac002430cb0da5b7982bd2287/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AWS679f53fac002430cb0da5b7982bd22872D164C4C",
+            "trace": [
+              "new Function (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-lambda/lib/function.js:166:26)",
+              "SingletonFunction.ensureLambda (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-lambda/lib/singleton-lambda.js:164:16)",
+              "new SingletonFunction (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-lambda/lib/singleton-lambda.js:32:36)",
+              "new AwsCustomResource (/home/ec2-user/aws-cdk2/packages/@aws-cdk/custom-resources/lib/aws-custom-resource/aws-custom-resource.js:161:26)",
+              "EmrContainersStartJobRun.updateRoleTrustPolicy (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/lib/emrcontainers/start-job-run.js:234:32)",
+              "EmrContainersStartJobRun.createJobExecutionRole (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/lib/emrcontainers/start-job-run.js:206:14)",
+              "new EmrContainersStartJobRun (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/lib/emrcontainers/start-job-run.js:82:91)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:68:24)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/SingletonLambda8693BB64968944B69AAFB0CC9EB8757C/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SingletonLambda8693BB64968944B69AAFB0CC9EB8757CServiceRoleF99BDB4C",
+            "trace": [
+              "new Role (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/role.js:58:22)",
+              "new Function (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-lambda/lib/function.js:90:35)",
+              "SingletonFunction.ensureLambda (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-lambda/lib/singleton-lambda.js:164:16)",
+              "new SingletonFunction (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-lambda/lib/singleton-lambda.js:32:36)",
+              "EmrContainersStartJobRun.updateRoleTrustPolicy (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/lib/emrcontainers/start-job-run.js:255:32)",
+              "EmrContainersStartJobRun.createJobExecutionRole (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/lib/emrcontainers/start-job-run.js:206:14)",
+              "new EmrContainersStartJobRun (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/lib/emrcontainers/start-job-run.js:82:91)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:68:24)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/SingletonLambda8693BB64968944B69AAFB0CC9EB8757C/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SingletonLambda8693BB64968944B69AAFB0CC9EB8757CServiceRoleDefaultPolicy87B52EEA",
+            "trace": [
+              "new Policy (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/policy.js:58:26)",
+              "Role.addToPrincipalPolicy (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/role.js:224:34)",
+              "SingletonFunction.addToRolePolicy (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-lambda/lib/function-base.js:101:19)",
+              "EmrContainersStartJobRun.updateRoleTrustPolicy (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/lib/emrcontainers/start-job-run.js:264:24)",
+              "EmrContainersStartJobRun.createJobExecutionRole (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/lib/emrcontainers/start-job-run.js:206:14)",
+              "new EmrContainersStartJobRun (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/lib/emrcontainers/start-job-run.js:82:91)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:68:24)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/SingletonLambda8693BB64968944B69AAFB0CC9EB8757C/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SingletonLambda8693BB64968944B69AAFB0CC9EB8757CB6182A5B",
+            "trace": [
+              "new Function (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-lambda/lib/function.js:166:26)",
+              "SingletonFunction.ensureLambda (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-lambda/lib/singleton-lambda.js:164:16)",
+              "new SingletonFunction (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-lambda/lib/singleton-lambda.js:32:36)",
+              "EmrContainersStartJobRun.updateRoleTrustPolicy (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/lib/emrcontainers/start-job-run.js:255:32)",
+              "EmrContainersStartJobRun.createJobExecutionRole (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/lib/emrcontainers/start-job-run.js:206:14)",
+              "new EmrContainersStartJobRun (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/lib/emrcontainers/start-job-run.js:82:91)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:68:24)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/StateMachine/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StateMachineRoleB840431D",
+            "trace": [
+              "new Role (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/role.js:58:22)",
+              "new StateMachine (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions/lib/state-machine.js:274:35)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:81:12)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/StateMachine/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StateMachineRoleDefaultPolicyDF1E6607",
+            "trace": [
+              "new Policy (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/policy.js:58:26)",
+              "Role.addToPrincipalPolicy (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/role.js:224:34)",
+              "StateMachine.addToRolePolicy (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions/lib/state-machine.js:310:19)",
+              "new StateMachine (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions/lib/state-machine.js:290:18)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:81:12)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/StateMachine/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StateMachine2E01A3A5",
+            "trace": [
+              "new StateMachine (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions/lib/state-machine.js:280:26)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:81:12)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/stateMachineArn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "stateMachineArn",
+            "trace": [
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:85:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/Service-principalMap": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceprincipalMap",
+            "trace": [
+              "Object.deployTimeLookup (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/region-lookup.js:35:19)",
+              "Stack.regionalFact (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/stack.js:640:32)",
+              "ServicePrincipalToken.resolve (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-iam/lib/principals.js:746:22)",
+              "RememberingTokenResolver.resolveToken (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/resolvable.js:64:30)",
+              "RememberingTokenResolver.resolveToken (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:198:22)",
+              "resolve (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:131:55)",
+              "Object.resolve [as mapToken] (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:58:48)",
+              "TokenizedStringFragments.mapTokens (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/string-fragments.js:78:43)",
+              "RememberingTokenResolver.resolveString (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/resolvable.js:93:26)",
+              "RememberingTokenResolver.resolveString (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:201:27)",
+              "resolve (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:98:54)",
+              "Object.resolve (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:58:48)",
+              "resolve (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:146:51)",
+              "Object.resolve (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:58:48)",
+              "resolve (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:146:51)",
+              "Object.resolve (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:58:48)",
+              "/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:122:51",
+              "Array.map (<anonymous>)",
+              "resolve (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:122:14)",
+              "Object.resolve (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:58:48)",
+              "resolve (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:146:51)",
+              "Object.resolve (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:58:48)",
+              "RememberingTokenResolver.resolveToken (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/resolvable.js:66:32)",
+              "RememberingTokenResolver.resolveToken (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:198:22)",
+              "resolve (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:131:55)",
+              "Object.resolve (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:58:48)",
+              "resolve (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:146:51)",
+              "Object.resolve (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:58:48)",
+              "RememberingTokenResolver.resolveToken (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/resolvable.js:66:32)",
+              "RememberingTokenResolver.resolveToken (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:198:22)",
+              "resolve (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:131:55)",
+              "Object.resolve (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:58:48)",
+              "resolve (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:146:51)",
+              "Object.resolve (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:58:48)",
+              "RememberingTokenResolver.resolveToken (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/resolvable.js:66:32)",
+              "RememberingTokenResolver.resolveToken (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:198:22)",
+              "resolve (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:131:55)",
+              "Object.resolve (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:58:48)",
+              "resolve (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:146:51)",
+              "Object.resolve (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:58:48)",
+              "resolve (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:146:51)",
+              "Object.findTokens (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/resolve.js:184:5)",
+              "findAllReferences (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/refs.js:97:38)",
+              "Object.resolveReferences (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/refs.js:20:19)",
+              "Object.prepareApp (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/prepare-app.js:30:12)",
+              "Object.synthesize (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/synthesis.js:21:19)",
+              "App.synth (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/stage.js:105:41)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:88:5)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion",
+            "trace": [
+              "addBootstrapVersionRule (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/stack-synthesizers/default-synthesizer.js:285:19)",
+              "DefaultStackSynthesizer.synthesize (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/stack-synthesizers/default-synthesizer.js:175:13)",
+              "/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/synthesis.js:155:35",
+              "visit (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/synthesis.js:200:9)",
+              "visit (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/synthesis.js:197:9)",
+              "synthesizeTree (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/synthesis.js:148:5)",
+              "Object.synthesize (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/synthesis.js:33:5)",
+              "App.synth (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/stage.js:105:41)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:88:5)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion",
+            "trace": [
+              "addBootstrapVersionRule (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/stack-synthesizers/default-synthesizer.js:293:5)",
+              "DefaultStackSynthesizer.synthesize (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/stack-synthesizers/default-synthesizer.js:175:13)",
+              "/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/synthesis.js:155:35",
+              "visit (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/synthesis.js:200:9)",
+              "visit (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/synthesis.js:197:9)",
+              "synthesizeTree (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/synthesis.js:148:5)",
+              "Object.synthesize (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/private/synthesis.js:33:5)",
+              "App.synth (/home/ec2-user/aws-cdk2/packages/@aws-cdk/core/lib/stage.js:105:41)",
+              "Object.<anonymous> (/home/ec2-user/aws-cdk2/packages/@aws-cdk/aws-stepfunctions-tasks/test/emrcontainers/integ.start-job-run.js:88:5)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ]
+      },
+      "displayName": "aws-stepfunctions-tasks-emr-containers-start-job-run-integ-test"
+    }
+  }
+}
