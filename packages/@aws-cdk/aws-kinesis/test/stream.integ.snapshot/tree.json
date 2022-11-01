@@ -9,7 +9,7 @@
         "path": "Tree",
         "constructInfo": {
           "fqn": "constructs.Construct",
-          "version": "10.1.85"
+          "version": "10.1.140"
         }
       },
       "integ-kinesis-stream": {
@@ -75,6 +75,7 @@
                             {
                               "Action": [
                                 "kinesis:DescribeStream",
+                                "kinesis:DescribeStreamConsumer",
                                 "kinesis:DescribeStreamSummary",
                                 "kinesis:GetRecords",
                                 "kinesis:GetShardIterator",
@@ -164,20 +165,20 @@
             "id": "AwsCdkKinesisEncryptedStreamsUnsupportedRegions",
             "path": "integ-kinesis-stream/AwsCdkKinesisEncryptedStreamsUnsupportedRegions",
             "constructInfo": {
-              "fqn": "constructs.Construct",
-              "version": "10.1.85"
+              "fqn": "@aws-cdk/core.CfnCondition",
+              "version": "0.0.0"
             }
           }
         },
         "constructInfo": {
-          "fqn": "constructs.Construct",
-          "version": "10.1.85"
+          "fqn": "@aws-cdk/core.Stack",
+          "version": "0.0.0"
         }
       }
     },
     "constructInfo": {
-      "fqn": "constructs.Construct",
-      "version": "10.1.85"
+      "fqn": "@aws-cdk/core.App",
+      "version": "0.0.0"
     }
   }
 }
