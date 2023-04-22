@@ -1,5 +1,5 @@
-import { Template } from '@aws-cdk/assertions';
-import { Stack } from '@aws-cdk/core';
+import { Template } from 'aws-cdk-lib/assertions';
+import { Stack } from 'aws-cdk-lib/core';
 import { AddressFamily, PrefixList } from '../lib/prefix-list';
 
 describe('prefix list', () => {

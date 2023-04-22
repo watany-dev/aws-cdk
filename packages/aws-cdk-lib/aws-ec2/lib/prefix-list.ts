@@ -1,4 +1,4 @@
-import { IResource, Lazy, Resource, Names } from '@aws-cdk/core';
+import { IResource, Lazy, Resource, Names } from 'aws-cdk-lib/core';
 import { Construct } from 'constructs';
 import { CfnPrefixList } from './ec2.generated';
 
