@@ -920,6 +920,12 @@ export interface DatabaseClusterProps extends DatabaseClusterBaseProps {
    * @default - A username of 'admin' (or 'postgres' for PostgreSQL) and SecretsManager-generated password
    */
   readonly credentials?: Credentials;
+
+  /**
+   * Whether to enable management of the master user password by AWS Secrets Manager.
+   * @default false
+   */
+  readonly manageMasterUserPassword?: boolean;
 }
 
 /**
@@ -952,14 +958,26 @@ export class DatabaseCluster extends DatabaseClusterNew {
     super(scope, id, props);
 
     const credentials = renderCredentials(this, props.engine, props.credentials);
-    const secret = credentials.secret;
+    let secret = credentials.secret;
 
-    const cluster = new CfnDBCluster(this, 'Resource', {
-      ...this.newCfnProps,
-      // Admin
-      masterUsername: credentials.username,
-      masterUserPassword: credentials.password?.unsafeUnwrap(),
-    });
+    let cluster: CfnDBCluster;
+
+    if (props.manageMasterUserPassword) {
+      // Logic to integrate with AWS Secrets Manager
+      // You need to add `addPropertyDeletionOverride("MasterUserPassword")` and remove the 'Secret' child
+      // if 'manageMasterUserPassword' is set to true.
+      this.node.tryRemoveChild('Secret');
+      cluster = new CfnDBCluster(this, 'Resource', {
+        ...this.newCfnProps,
+        masterUsername: credentials.username,
+      });
+    } else {
+      cluster = new CfnDBCluster(this, 'Resource', {
+        ...this.newCfnProps,
+        masterUsername: credentials.username,
+        masterUserPassword: credentials.password?.unsafeUnwrap(),
+      });
+    }
 
     this.clusterIdentifier = cluster.ref;
     this.clusterResourceIdentifier = cluster.attrDbClusterResourceId;
