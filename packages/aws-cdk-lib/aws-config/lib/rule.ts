@@ -2098,6 +2098,8 @@ export class ResourceType {
   public static readonly APIGATEWAY_REST_API = new ResourceType('AWS::ApiGateway::RestApi');
   /** API Gatewayv2 API */
   public static readonly APIGATEWAYV2_API = new ResourceType('AWS::ApiGatewayV2::Api');
+  /** Amazon AppStream Directory Config */
+  public static readonly APPSTREAM_DIRECTORY_CONFIG = new ResourceType('AWS::AppStream::DirectoryConfig');
   /** Amazon CloudFront Distribution */
   public static readonly CLOUDFRONT_DISTRIBUTION = new ResourceType('AWS::CloudFront::Distribution');
   /** Amazon CloudFront streaming distribution */
@@ -2106,6 +2108,10 @@ export class ResourceType {
   public static readonly CLOUDWATCH_ALARM = new ResourceType('AWS::CloudWatch::Alarm');
   /** Amazon CloudWatch RUM */
   public static readonly CLOUDWATCH_RUM_APP_MONITOR = new ResourceType('AWS::RUM::AppMonitor');
+  /** Amazon Connect Phone Number */
+  public static readonly CONNECT_PHONE_NUMBER = new ResourceType('AWS::Connect::PhoneNumber');
+  /** Amazon Connect Customer Profiles Domain */
+  public static readonly CONNECT_CUSTOMER_PROFILES_DOMAIN = new ResourceType('AWS::CustomerProfiles::Domain');
   /** Amazon DynamoDB Table */
   public static readonly DYNAMODB_TABLE = new ResourceType('AWS::DynamoDB::Table');
   /** Elastic Block Store (EBS) volume */
@@ -2144,6 +2150,14 @@ export class ResourceType {
   public static readonly EC2_LAUNCH_TEMPLATE = new ResourceType('AWS::EC2::LaunchTemplate');
   /** EC2 Network Insights Access Scope Analysis */
   public static readonly EC2_NETWORK_INSIGHTS_ACCESS_SCOPE_ANALYSIS = new ResourceType('AWS::EC2::NetworkInsightsAccessScopeAnalysis');
+  /** Amazon EC2 DHCP Options */
+  public static readonly EC2_DHCP_OPTIONS = new ResourceType('AWS::EC2::DHCPOptions');
+  /** Amazon EC2 IP Address Management */
+  public static readonly EC2_IPAM = new ResourceType('AWS::EC2::IPAM');
+  /** Amazon EC2 Network Insights Path */
+  public static readonly EC2_NETWORK_INSIGHTS_PATH = new ResourceType('AWS::EC2::NetworkInsightsPath');
+  /** Amazon EC2 Traffic Mirror Filter */
+  public static readonly EC2_TRAFFIC_MIRROR_FILTER = new ResourceType('AWS::EC2::TrafficMirrorFilter');
   /** EC2 Image Builder ContainerRecipe */
   public static readonly IMAGEBUILDER_CONTAINER_RECIPE = new ResourceType('AWS::ImageBuilder::ContainerRecipe');
   /** EC2 Image Builder DistributionConfiguration */
@@ -2182,6 +2196,10 @@ export class ResourceType {
   public static readonly EVENTBRIDGE_ARCHIVE = new ResourceType('AWS::Events::Archive');
   /** Amazon EventBridge Endpoint */
   public static readonly EVENTBRIDGE_ENDPOINT = new ResourceType('AWS::Events::Endpoint');
+  /** Amazon EventBridge Connection */
+  public static readonly EVENTS_CONNECTION = new ResourceType('AWS::Events::Connection');
+  /** Amazon EventBridge Rule */
+  public static readonly EVENTS_RULE = new ResourceType('AWS::Events::Rule');
   /** Amazon EventBridge EventSchemas registry */
   public static readonly EVENTSCHEMAS_REGISTRY = new ResourceType('AWS::EventSchemas::Registry');
   /** Amazon EventBridge EventSchemas registry policy */
@@ -2204,6 +2222,8 @@ export class ResourceType {
   public static readonly GUARDDUTY_IP_SET = new ResourceType(' AWS::GuardDuty::IPSet');
   /** Amazon GuardDuty Filter */
   public static readonly GUARDDUTY_FILTER = new ResourceType('AWS::GuardDuty::Filter');
+  /** Amazon HealthLake FHIR Datastore */
+  public static readonly HEALTHLAKE_FHIR_DATASTORE = new ResourceType('AWS::HealthLake::FHIRDatastore');
   /** Amazon ElasticSearch domain */
   public static readonly ELASTICSEARCH_DOMAIN = new ResourceType('AWS::Elasticsearch::Domain');
   /** Amazon Interactive Video Service (IVS) channel */
@@ -2214,6 +2234,10 @@ export class ResourceType {
   public static readonly IVS_PLAYBACK_KEYPAIR = new ResourceType('AWS::IVS::PlaybackKeyPair');
   /** Amazon OpenSearch domain */
   public static readonly OPENSEARCH_DOMAIN = new ResourceType('AWS::OpenSearch::Domain');
+  /** Amazon Pinpoint Application Settings */
+  public static readonly PINPOINT_APPLICATION_SETTINGS = new ResourceType('AWS::Pinpoint::ApplicationSettings');
+  /** Amazon Pinpoint Segment */
+  public static readonly PINPOINT_SEGMENT = new ResourceType('AWS::Pinpoint::Segment');
   /** Amazon QLDB ledger */
   public static readonly QLDB_LEDGER = new ResourceType('AWS::QLDB::Ledger');
   /** Amazon Kinesis stream */
@@ -2222,6 +2246,8 @@ export class ResourceType {
   public static readonly KINESIS_STREAM_CONSUMER = new ResourceType('AWS::Kinesis::StreamConsumer');
   /** Amazon Kinesis Analytics V2 application */
   public static readonly KINESIS_ANALYTICS_V2_APPLICATION = new ResourceType('AWS::KinesisAnalyticsV2::Application');
+  /** Amazon Kinesis Video Signaling Channel */
+  public static readonly KINESIS_VIDEO_SIGNALING_CHANNEL = new ResourceType('AWS::KinesisVideo::SignalingChannel');
   /** Amazon Lightsail Certificate */
   public static readonly LIGHTSAIL_CERTIFICATE = new ResourceType('AWS::Lightsail::Certificate');
   /** Amazon Lightsail Disk */
@@ -2230,6 +2256,10 @@ export class ResourceType {
   public static readonly LIGHTSAIL_BUCKET = new ResourceType('AWS::Lightsail::Bucket');
   /** AWS Lightsail static IP */
   public static readonly LIGHTSAIL_STATIC_IP = new ResourceType('AWS::Lightsail::StaticIp');
+  /** Amazon Lookout for Metrics Alert */
+  public static readonly LOOKOUT_METRICS_ALERT = new ResourceType('AWS::LookoutMetrics::Alert');
+  /** Amazon Lookout for Vision Project */
+  public static readonly LOOKOUT_VISION_PROJECT = new ResourceType('AWS::LookoutVision::Project');
   /** Amazon MQ broker */
   public static readonly AMAZON_MQ_BROKER = new ResourceType('AWS::AmazonMQ::Broker');
   /** Amazon MSK cluster */
@@ -2278,6 +2308,16 @@ export class ResourceType {
   public static readonly ROUTE53_RECOVERY_READINESS_READINESS_CHECK = new ResourceType('AWS::Route53RecoveryReadiness::ReadinessCheck');
   /** Amazon Route53 recovery readiness recovery group */
   public static readonly ROUTE53_RECOVERY_READINESS_RECOVERY_GROUP = new ResourceType('AWS::Route53RecoveryReadiness::RecoveryGroup');
+  /** Amazon Route 53 Recovery Control Cluster */
+  public static readonly ROUTE53_RECOVERY_CONTROL_CLUSTER = new ResourceType('AWS::Route53RecoveryControl::Cluster');
+  /** Amazon Route 53 Recovery Control Panel */
+  public static readonly ROUTE53_RECOVERY_CONTROL_PANEL = new ResourceType('AWS::Route53RecoveryControl::ControlPanel');
+  /** Amazon Route 53 Recovery Routing Control */
+  public static readonly ROUTE53_RECOVERY_ROUTING_CONTROL = new ResourceType('AWS::Route53RecoveryControl::RoutingControl');
+  /** Amazon Route 53 Recovery Safety Rule */
+  public static readonly ROUTE53_RECOVERY_SAFETY_RULE = new ResourceType('AWS::Route53RecoveryControl::SafetyRule');
+  /** Amazon Route 53 Recovery Readiness Resource Set */
+  public static readonly ROUTE53_RECOVERY_READINESS_RESOURCE_SET = new ResourceType('AWS::Route53RecoveryReadiness::ResourceSet');  
   /** Amazon SQS queue */
   public static readonly SQS_QUEUE = new ResourceType('AWS::SQS::Queue');
   /** Amazon SNS topic */
@@ -2322,6 +2362,8 @@ export class ResourceType {
   public static readonly EC2_VPN_CONNECTION = new ResourceType('AWS::EC2::VPNConnection');
   /** Amazon EC2 VPN gateway */
   public static readonly EC2_VPN_GATEWAY = new ResourceType('AWS::EC2::VPNGateway');
+  /** AWS Network Manager Transit Gateway Registration */
+  public static readonly NETWORK_MANAGER_TRANSIT_GATEWAY_REGISTRATION = new ResourceType('AWS::NetworkManager::TransitGatewayRegistration');
   /** AWS Auto Scaling group */
   public static readonly AUTO_SCALING_GROUP = new ResourceType('AWS::AutoScaling::AutoScalingGroup');
   /** AWS Auto Scaling launch configuration */
@@ -2330,6 +2372,8 @@ export class ResourceType {
   public static readonly AUTO_SCALING_POLICY = new ResourceType('AWS::AutoScaling::ScalingPolicy');
   /** AWS Auto Scaling scheduled action */
   public static readonly AUTO_SCALING_SCHEDULED_ACTION = new ResourceType('AWS::AutoScaling::ScheduledAction');
+  /** AWS Auto Scaling Warm Pool */
+  public static readonly AUTO_SCALING_WARM_POOL = new ResourceType('AWS::AutoScaling::WarmPool');
   /** Amazon WorkSpaces connection alias */
   public static readonly WORKSPACES_CONNECTION_ALIAS = new ResourceType('AWS::WorkSpaces::ConnectionAlias');
   /** Amazon WorkSpaces workSpace */
@@ -2452,6 +2496,8 @@ export class ResourceType {
   public static readonly IOT_TWINMAKER_WORKSPACE = new ResourceType('AWS::IoTwinMaker::Workspace');
   /** AWS IoT TwinMaker entity */
   public static readonly IOT_TWINMAKER_ENTITY = new ResourceType('AWS::IoTTwinMaker::Entity');
+  /** Amazon IoT TwinMaker Scene */
+  public static readonly IOT_TWINMAKER_SCENE = new ResourceType('AWS::IoTTwinMaker::Scene');
   /** AWS IoT Analytics datastore */
   public static readonly IOT_ANALYTICS_DATASTORE = new ResourceType('AWS::IoTAnalytics::Datastore');
   /** AWS IoT Analytics dataset */
@@ -2486,7 +2532,11 @@ export class ResourceType {
   public static readonly NETWORK_FIREWALL_RULE_GROUP = new ResourceType('AWS::NetworkFirewall::RuleGroup');
   /** AWS ResilienceHub resiliency policy */
   public static readonly RESILIENCEHUB_RESILIENCY_POLICY = new ResourceType('AWS::ResilienceHub::ResiliencyPolicy');
-  /**AWS Secrets Manager secret */
+  /** AWS RoboMaker Robot Application */
+  public static readonly ROBOMAKER_ROBOT_APPLICATION = new ResourceType('AWS::RoboMaker::RobotApplication');
+  /** AWS RoboMaker Simulation Application */
+  public static readonly ROBOMAKER_SIMULATION_APPLICATION = new ResourceType('AWS::RoboMaker::SimulationApplication');
+  /** AWS Secrets Manager secret */
   public static readonly SECRETS_MANAGER_SECRET = new ResourceType('AWS::SecretsManager::Secret');
   /** AWS Service Catalog CloudFormation product */
   public static readonly SERVICE_CATALOG_CLOUDFORMATION_PRODUCT = new ResourceType('AWS::ServiceCatalog::CloudFormationProduct');
