@@ -257,6 +257,40 @@ describe('codecommit', () => {
       });
 
       // WHEN
+      repository.grantPush(role);
+
+      // THEN
+      Template.fromStack(stack).hasResourceProperties('AWS::IAM::Policy', {
+        PolicyDocument: {
+          Statement: [
+            {
+              Action: 'codecommit:GitPush',
+              Effect: 'Allow',
+              Resource: {
+                'Fn::GetAtt': [
+                  'Repo02AC86CF',
+                  'Arn',
+                ],
+              },
+            },
+          ],
+          Version: '2012-10-17',
+        },
+      });
+
+    });
+
+    test('grant pull and push', () => {
+      // GIVEN
+      const stack = new Stack();
+      const repository = new Repository(stack, 'Repo', {
+        repositoryName: 'repo-name',
+      });
+      const role = new Role(stack, 'Role', {
+        assumedBy: new ServicePrincipal('ec2.amazonaws.com'),
+      });
+
+      // WHEN
       repository.grantPullPush(role);
 
       // THEN

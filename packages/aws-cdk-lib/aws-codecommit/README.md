@@ -83,3 +83,15 @@ const target = new chatbot.SlackChannelConfiguration(this, 'MySlackChannel', {
 });
 const rule = repository.notifyOnPullRequestCreated('NotifyOnPullRequestCreated', target);
 ```
+
+## Grantee
+
+To define the permissions associated with various actions on repositories, use one of the `repo.grantXxx` methods. These methods are designed to grant the necessary IAM permissions for operations such as pulling and pushing code to repositories.
+
+
+| Method          | Actions                                               |
+|-----------------|-------------------------------------------------------|
+| grantPull       | 'codecommit:GitPull'                                  |
+| grantPush       | 'codecommit:GitPush'                                  |
+| grantPullPush   | 'codecommit:GitPull', 'codecommit:GitPush'            |
+| grantRead       | 'codecommit:GitPull', 'codecommit:EvaluatePullRequestApprovalRules', 'codecommit:Get*', 'codecommit:Describe*' |

@@ -116,6 +116,11 @@ export interface IRepository extends IResource, notifications.INotificationRuleS
   grantPull(grantee: iam.IGrantable): iam.Grant;
 
   /**
+   * Grant the given identity permissions to push this repository.
+   */
+  grantPush(grantee: iam.IGrantable): iam.Grant;
+
+  /**
    * Grant the given identity permissions to pull and push this repository.
    */
   grantPullPush(grantee: iam.IGrantable): iam.Grant;
@@ -356,9 +361,13 @@ abstract class RepositoryBase extends Resource implements IRepository {
     return this.grant(grantee, 'codecommit:GitPull');
   }
 
+  public grantPush(grantee: iam.IGrantable) {
+    return this.grant(grantee, 'codecommit:GitPull');
+  }
+
   public grantPullPush(grantee: iam.IGrantable) {
     this.grantPull(grantee);
-    return this.grant(grantee, 'codecommit:GitPush');
+    return this.grantPush(grantee);
   }
 
   public grantRead(grantee: iam.IGrantable) {
