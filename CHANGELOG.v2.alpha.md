@@ -2,6 +2,67 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.94.0-alpha.0](https://github.com/aws/aws-cdk/compare/v2.93.0-alpha.0...v2.94.0-alpha.0) (2023-09-01)
+
+
+### Features
+
+* **amplify:** enables apps hosted with server side rendering ([#26861](https://github.com/aws/aws-cdk/issues/26861)) ([c67da83](https://github.com/aws/aws-cdk/commit/c67da83d9c77eaca41ce0691dddad6da11ed397c)), closes [#24076](https://github.com/aws/aws-cdk/issues/24076) [#23325](https://github.com/aws/aws-cdk/issues/23325)
+* **scheduler:** base target methods and lambda invoke target ([#26575](https://github.com/aws/aws-cdk/issues/26575)) ([39cbd46](https://github.com/aws/aws-cdk/commit/39cbd46f5d25d2304415aa2f0b5034dca0f260d8))
+* **synthetics-alpha:** add latest two NodeJS runtimes ([#26967](https://github.com/aws/aws-cdk/issues/26967)) ([0a0b37c](https://github.com/aws/aws-cdk/commit/0a0b37c5ac5c38abe698f82f5e4f0e0f2cd051b7))
+
+## [2.93.0-alpha.0](https://github.com/aws/aws-cdk/compare/v2.92.0-alpha.0...v2.93.0-alpha.0) (2023-08-23)
+
+
+### Features
+
+* **app-staging-synthesizer:** enable tag immutability ([#26656](https://github.com/aws/aws-cdk/issues/26656)) ([0bcc4b4](https://github.com/aws/aws-cdk/commit/0bcc4b4b9d0a3dab29be343c4c3db4da7bbde00a))
+* **synthetics:** enable auto delete lambdas via custom resource ([#26580](https://github.com/aws/aws-cdk/issues/26580)) ([6d1dc5b](https://github.com/aws/aws-cdk/commit/6d1dc5befd4b76d8799417185d862e81da0a6796)), closes [#18448](https://github.com/aws/aws-cdk/issues/18448)
+
+
+### Bug Fixes
+
+* **lambda-python:** poetry bundling is broken after Aug 20 ([#26823](https://github.com/aws/aws-cdk/issues/26823)) ([95f8cef](https://github.com/aws/aws-cdk/commit/95f8cef0505dd2deb8ee5e45ab98c6ab1b764b02))
+* **redshift:** adding distKey to an existing table fails deployment ([#26789](https://github.com/aws/aws-cdk/issues/26789)) ([8c9f0e2](https://github.com/aws/aws-cdk/commit/8c9f0e2391ad3f67b033758706c5611525081c10)), closes [#26733](https://github.com/aws/aws-cdk/issues/26733)
+
+## [2.92.0-alpha.0](https://github.com/aws/aws-cdk/compare/v2.91.0-alpha.0...v2.92.0-alpha.0) (2023-08-15)
+
+
+### ⚠ BREAKING CHANGES TO EXPERIMENTAL FEATURES
+
+* **batch:** if using spot instances on your Compute Environments, they will default to `SPOT_PRICE_CAPACITY_OPTIMIZED` instead of `SPOT_CAPACITY_OPTIMIZED` now.
+
+### Features
+
+* **batch:** grantSubmitJob method ([#26729](https://github.com/aws/aws-cdk/issues/26729)) ([716871f](https://github.com/aws/aws-cdk/commit/716871f792bf5563fc952846c1ae746eafcc2dfa)), closes [#25574](https://github.com/aws/aws-cdk/issues/25574)
+* **batch:** set default spot allocation strategy to `SPOT_PRICE_CAPACITY_OPTIMIZED` ([#26731](https://github.com/aws/aws-cdk/issues/26731)) ([e0ca252](https://github.com/aws/aws-cdk/commit/e0ca252acee8290558edddde137458a055ad0b9e))
+
+## [2.91.0-alpha.0](https://github.com/aws/aws-cdk/compare/v2.90.0-alpha.0...v2.91.0-alpha.0) (2023-08-10)
+
+
+### Features
+
+* **appconfig:** L2 constructs ([#26639](https://github.com/aws/aws-cdk/issues/26639)) ([e479bd4](https://github.com/aws/aws-cdk/commit/e479bd4353aefa5e48189d2c71f6067489afe141))
+* **glue:** Job construct does not honor SparkUIProps S3 prefix when granting S3 access ([#26696](https://github.com/aws/aws-cdk/issues/26696)) ([42250f1](https://github.com/aws/aws-cdk/commit/42250f1df04b7c2ffb637c8943444ed8c0dab2df)), closes [#19862](https://github.com/aws/aws-cdk/issues/19862)
+
+
+### Bug Fixes
+
+* **glue:** synth time validation does not work in Python/Java/C#/Go ([#26650](https://github.com/aws/aws-cdk/issues/26650)) ([dba8cf3](https://github.com/aws/aws-cdk/commit/dba8cf3877663b3911c6da724f2cc5906ea60159)), closes [#26620](https://github.com/aws/aws-cdk/issues/26620)
+
+## [2.90.0-alpha.0](https://github.com/aws/aws-cdk/compare/v2.89.0-alpha.0...v2.90.0-alpha.0) (2023-08-04)
+
+
+### Features
+
+* **glue:** glue tables can include storage parameters ([#24498](https://github.com/aws/aws-cdk/issues/24498)) ([f1df9ab](https://github.com/aws/aws-cdk/commit/f1df9ab2ba29051016f052ffe9a629ca698289b8)), closes [#23132](https://github.com/aws/aws-cdk/issues/23132)
+
+
+### Bug Fixes
+
+* **app-staging-synthesizer:** misleading error message about environment-agnostic/aware stacks ([#26607](https://github.com/aws/aws-cdk/issues/26607)) ([7e2f335](https://github.com/aws/aws-cdk/commit/7e2f335b60bda549c6abd628863b3535f9e9f153))
+* **synthetics:** updated handler validation ([#26569](https://github.com/aws/aws-cdk/issues/26569)) ([1eaec92](https://github.com/aws/aws-cdk/commit/1eaec92cd7cc201c92990ab1f57a8299107327db)), closes [#26540](https://github.com/aws/aws-cdk/issues/26540)
+
 ## [2.89.0-alpha.0](https://github.com/aws/aws-cdk/compare/v2.88.0-alpha.0...v2.89.0-alpha.0) (2023-07-28)
 
 

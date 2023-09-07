@@ -58,7 +58,7 @@ when it is triggered.
 
 ```ts
 const func = new lambda.Function(this, 'MyFunction', {
-  runtime: lambda.Runtime.NODEJS_14_X,
+  runtime: lambda.Runtime.NODEJS_LATEST,
   handler: 'index.handler',
   code: lambda.Code.fromInline(`
     exports.handler = (event) => {
@@ -192,7 +192,7 @@ import * as cloudwatch from 'aws-cdk-lib/aws-cloudwatch';
 const metric = new cloudwatch.Metric({
   namespace: 'MyNamespace',
   metricName: 'MyMetric',
-  dimensions: { MyDimension: 'MyDimensionValue' },
+  dimensionsMap: { MyDimension: 'MyDimensionValue' },
 });
 const alarm = new cloudwatch.Alarm(this, 'MyAlarm', {
   metric: metric,
