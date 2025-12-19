@@ -72,10 +72,6 @@ export enum HttpMethod {
    */
   PATCH = 'PATCH',
   /**
-   * The OPTIONS method describes the communication options for the target resource.
-   */
-  OPTIONS = 'OPTIONS',
-  /**
    * The wildcard entry to allow all methods.
    */
   ALL = '*',
@@ -294,6 +290,25 @@ export class FunctionUrl extends Resource implements IFunctionUrl {
   private renderCors(cors: FunctionUrlCorsOptions): CfnUrl.CorsProperty {
     if (cors.maxAge && !cors.maxAge.isUnresolved() && cors.maxAge.toSeconds() > 86400) {
       throw new ValidationError(`FunctionUrl CORS maxAge should be less than or equal to 86400 secs (got ${cors.maxAge.toSeconds()})`, this);
+    }
+
+    if (cors.allowedMethods !== undefined) {
+      if (cors.allowedMethods.length < 1) {
+        throw new ValidationError('FunctionUrl CORS allowedMethods must have at least 1 item', this);
+      }
+      if (cors.allowedMethods.length > 6) {
+        throw new ValidationError(`FunctionUrl CORS allowedMethods can have at most 6 items (got ${cors.allowedMethods.length})`, this);
+      }
+      const uniqueMethods = new Set(cors.allowedMethods);
+      if (uniqueMethods.size !== cors.allowedMethods.length) {
+        throw new ValidationError('FunctionUrl CORS allowedMethods contains duplicate entries', this);
+      }
+      if (cors.allowedMethods.includes(HttpMethod.ALL) && cors.allowedMethods.length > 1) {
+        throw new ValidationError(
+          "FunctionUrl CORS allowedMethods - 'HttpMethod.ALL' cannot be combined with other HTTP methods. Use either [HttpMethod.ALL] or a list of specific methods.",
+          this,
+        );
+      }
     }
 
     return {

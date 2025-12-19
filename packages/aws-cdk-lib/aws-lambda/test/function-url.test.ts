@@ -178,6 +178,196 @@ describe('FunctionUrl', () => {
     }).toThrow(/FunctionUrl CORS maxAge should be less than or equal to 86400 secs/);
   });
 
+  test('throws when CORS allowedMethods is empty array', () => {
+    // GIVEN
+    const stack = new cdk.Stack();
+    const fn = new lambda.Function(stack, 'MyLambda', {
+      code: new lambda.InlineCode('hello()'),
+      handler: 'index.hello',
+      runtime: lambda.Runtime.NODEJS_LATEST,
+    });
+
+    // WHEN
+    expect(() => {
+      new lambda.FunctionUrl(stack, 'FunctionUrl', {
+        function: fn,
+        cors: {
+          allowedMethods: [],
+        },
+      });
+    }).toThrow(/FunctionUrl CORS allowedMethods must have at least 1 item/);
+  });
+
+  test('throws when CORS allowedMethods exceeds 6 items', () => {
+    // GIVEN
+    const stack = new cdk.Stack();
+    const fn = new lambda.Function(stack, 'MyLambda', {
+      code: new lambda.InlineCode('hello()'),
+      handler: 'index.hello',
+      runtime: lambda.Runtime.NODEJS_LATEST,
+    });
+
+    // WHEN
+    expect(() => {
+      new lambda.FunctionUrl(stack, 'FunctionUrl', {
+        function: fn,
+        cors: {
+          allowedMethods: [
+            lambda.HttpMethod.GET,
+            lambda.HttpMethod.POST,
+            lambda.HttpMethod.PUT,
+            lambda.HttpMethod.DELETE,
+            lambda.HttpMethod.PATCH,
+            lambda.HttpMethod.HEAD,
+            lambda.HttpMethod.ALL,
+          ],
+        },
+      });
+    }).toThrow(/FunctionUrl CORS allowedMethods can have at most 6 items/);
+  });
+
+  test('allows exactly 6 methods in CORS allowedMethods', () => {
+    // GIVEN
+    const stack = new cdk.Stack();
+    const fn = new lambda.Function(stack, 'MyLambda', {
+      code: new lambda.InlineCode('hello()'),
+      handler: 'index.hello',
+      runtime: lambda.Runtime.NODEJS_LATEST,
+    });
+
+    // WHEN
+    new lambda.FunctionUrl(stack, 'FunctionUrl', {
+      function: fn,
+      cors: {
+        allowedMethods: [
+          lambda.HttpMethod.GET,
+          lambda.HttpMethod.POST,
+          lambda.HttpMethod.PUT,
+          lambda.HttpMethod.DELETE,
+          lambda.HttpMethod.PATCH,
+          lambda.HttpMethod.HEAD,
+        ],
+      },
+    });
+
+    // THEN
+    Template.fromStack(stack).hasResourceProperties('AWS::Lambda::Url', {
+      Cors: {
+        AllowMethods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'HEAD'],
+      },
+    });
+  });
+
+  test('throws when CORS allowedMethods contains duplicates', () => {
+    // GIVEN
+    const stack = new cdk.Stack();
+    const fn = new lambda.Function(stack, 'MyLambda', {
+      code: new lambda.InlineCode('hello()'),
+      handler: 'index.hello',
+      runtime: lambda.Runtime.NODEJS_LATEST,
+    });
+
+    // WHEN
+    expect(() => {
+      new lambda.FunctionUrl(stack, 'FunctionUrl', {
+        function: fn,
+        cors: {
+          allowedMethods: [lambda.HttpMethod.GET, lambda.HttpMethod.GET],
+        },
+      });
+    }).toThrow(/FunctionUrl CORS allowedMethods contains duplicate entries/);
+  });
+
+  test('allows single method in CORS allowedMethods', () => {
+    // GIVEN
+    const stack = new cdk.Stack();
+    const fn = new lambda.Function(stack, 'MyLambda', {
+      code: new lambda.InlineCode('hello()'),
+      handler: 'index.hello',
+      runtime: lambda.Runtime.NODEJS_LATEST,
+    });
+
+    // WHEN
+    new lambda.FunctionUrl(stack, 'FunctionUrl', {
+      function: fn,
+      cors: {
+        allowedMethods: [lambda.HttpMethod.POST],
+      },
+    });
+
+    // THEN
+    Template.fromStack(stack).hasResourceProperties('AWS::Lambda::Url', {
+      Cors: {
+        AllowMethods: ['POST'],
+      },
+    });
+  });
+
+  test('allows HttpMethod.ALL alone in CORS allowedMethods', () => {
+    // GIVEN
+    const stack = new cdk.Stack();
+    const fn = new lambda.Function(stack, 'MyLambda', {
+      code: new lambda.InlineCode('hello()'),
+      handler: 'index.hello',
+      runtime: lambda.Runtime.NODEJS_LATEST,
+    });
+
+    // WHEN
+    new lambda.FunctionUrl(stack, 'FunctionUrl', {
+      function: fn,
+      cors: {
+        allowedMethods: [lambda.HttpMethod.ALL],
+      },
+    });
+
+    // THEN
+    Template.fromStack(stack).hasResourceProperties('AWS::Lambda::Url', {
+      Cors: {
+        AllowMethods: ['*'],
+      },
+    });
+  });
+
+  test('throws when CORS allowedMethods contains HttpMethod.ALL with other methods', () => {
+    // GIVEN
+    const stack = new cdk.Stack();
+    const fn = new lambda.Function(stack, 'MyLambda', {
+      code: new lambda.InlineCode('hello()'),
+      handler: 'index.hello',
+      runtime: lambda.Runtime.NODEJS_LATEST,
+    });
+
+    // WHEN
+    expect(() => {
+      new lambda.FunctionUrl(stack, 'FunctionUrl', {
+        function: fn,
+        cors: {
+          allowedMethods: [lambda.HttpMethod.ALL, lambda.HttpMethod.GET],
+        },
+      });
+    }).toThrow(/FunctionUrl CORS allowedMethods - 'HttpMethod\.ALL' cannot be combined with other HTTP methods/);
+  });
+
+  test('throws when CORS allowedMethods contains multiple methods with HttpMethod.ALL', () => {
+    // GIVEN
+    const stack = new cdk.Stack();
+    const fn = new lambda.Function(stack, 'MyLambda', {
+      code: new lambda.InlineCode('hello()'),
+      handler: 'index.hello',
+      runtime: lambda.Runtime.NODEJS_LATEST,
+    });
+
+    // WHEN
+    expect(() => {
+      new lambda.FunctionUrl(stack, 'FunctionUrl', {
+        function: fn,
+        cors: {
+          allowedMethods: [lambda.HttpMethod.GET, lambda.HttpMethod.POST, lambda.HttpMethod.ALL],
+        },
+      });
+    }).toThrow(/FunctionUrl CORS allowedMethods - 'HttpMethod\.ALL' cannot be combined with other HTTP methods/);
+  });
+
   test('DUAL AUTH: grantInvokeUrl: adds appropriate permissions', () => {
     // GIVEN
     const stack = new cdk.Stack();
